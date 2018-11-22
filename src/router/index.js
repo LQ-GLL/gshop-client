@@ -12,6 +12,7 @@ import MSite from '../pages/MSite/MSite.vue'
 import Search from '../pages/Search/Search.vue'
 import Order from '../pages/Order/Order.vue'
 import Profile from '../pages/Profile/Profile.vue'
+import Login from '../pages/Login/Login.vue'
 
 //路由器声明使用vue插件
 Vue.use(VueRouter)
@@ -26,19 +27,36 @@ export default new VueRouter({
     //每一个数组元素的类型是对象：代表一个路由：路由由两个部分组成
     {
       path: '/msite',
-      component: MSite
+      component: MSite,
+      meta: {
+        showFoot: true
+      }
     },
     {
       path: '/search',
-      component: Search
+      component: Search,
+      meta: {
+        showFoot: true
+      }
     },
     {
       path: '/order',
-      component: Order
+      component: Order,
+      meta: {
+        showFoot: true
+      }
     },
     {
       path: '/profile',
-      component: Profile
+      component: Profile,
+      //路由元信息
+      meta: {
+        showFoot: true
+      }
+    },
+    {
+      path: '/login',
+      component: Login
     },
     //默认的
     {
